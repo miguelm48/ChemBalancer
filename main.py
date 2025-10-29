@@ -20,6 +20,3 @@ def balance():
         return render_template("index.html", equation=equation, balanced_equation=result)
     except Exception as e:
         return render_template("index.html", equation=equation, balanced_equation="Error balancing equation")
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=81)
