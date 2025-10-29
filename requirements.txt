@@ -1,4 +1,3 @@
-flask
-chempy==0.9.0
-sympy==1.13.3
-css
+Flask
+gunicorn
+sympy
