@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Chemical Equation Balancer</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        background: linear-gradient(to right, #ccfbff, #ef96c5);
+        margin-top: 80px;
+        }
+        h1 {
+          color: #38446d;
+          font-size: 2.5em;
+      
+      }
+      
+      input {
+        padding: 12px;
+        width: 300px;
+        border-radius: 10px;
+        border: 2px solid #007BFF;
+      }
+      button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .result {
+        margin-top: 30px;
+        background-color: white;
+        padding: 20px;
+        width: 50%;
+        margin: 30px auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1> Chemical Equation Balancer </h1>
+    <form method="POST" action="/balance">
+      <input type="text" name="equation" placeholder="Example: H2 + O2 -> H2O" required>
+      <button type="submit">Balance</button>
+    </form>
+
+    {% if balanced_equation %}
+      <div class="result">
+        <h3>Input:</h3>
+        <p>{{ equation }}</p>
+        <h3>Balanced:</h3>
+        <p>{{ balanced_equation }}</p>
+      </div>
+    {% endif %}
+  </body>
+</html>
+<footer style="margin-top: 50px; color: #38446d;">
+  Created by Miguel Macias
+</footer>
