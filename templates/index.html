@@ -42,6 +42,24 @@
         border-radius: 10px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       }
+      .instructions {
+        background-color: #ffffff;
+        color: #333;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 40px auto;
+        width: 60%;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .instructions h2 {
+        color: #38446d;
+      }
+
+      .instructions ul li {
+        margin-bottom: 8px;
+      }
+
     </style>
   </head>
   <body>
@@ -50,6 +68,17 @@
       <input type="text" name="equation" placeholder="Example: H2 + O2 -> H2O" required>
       <button type="submit">Balance</button>
     </form>
+    <div class="instructions">
+      <h2>How to Use</h2>
+      <p>Type a chemical equation in the box above, using this format:</p>
+      <ul style="text-align:left; display:inline-block;">
+        <li>Use <b>spaces</b> around the “+” and “→” symbols.</li>
+        <li>Write reactants and products like this: <b>H2 + O2 -> H2O</b></li>
+        <li>Use correct capitalization (e.g., <b>NaCl</b>, not <b>nacl</b>).</li>
+        <li>Make sure to include both sides of the equation with an arrow.</li>
+        <li>Press <b>Balance</b> to see the result!</li>
+      </ul>
+    </div>
 
     {% if balanced_equation %}
       <div class="result">
